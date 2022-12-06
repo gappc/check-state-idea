@@ -1,0 +1,17 @@
+<h3>three works!</h3>
+<div style="font-style: italic">
+  This component
+  <ul>
+    <li>uses the <strong>OnPush change detection strategy</strong></li>
+    <li>
+      allows to change the value for the <code>age</code> property in the
+      service using an input element (note: accepts numbers only)
+    </li>
+    <li>shows the current value for age</li>
+  </ul>
+</div>
+
+<div style="background-color: rgba(0, 0, 0, 0.1); padding: 10px">
+  <input type="number" [value]="service.age" (input)="changeAge($event)" />
+  <p>Current age: {{ service.age$ | async }}</p>
+</div>

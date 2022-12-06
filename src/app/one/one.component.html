@@ -1,0 +1,22 @@
+<h3>one works!</h3>
+<div>
+  This component
+  <ul>
+    <li>uses the <strong>default change detection strategy</strong></li>
+    <li>
+      shows all current values from the service using plain properties (note: in
+      reality those are getters) and observables
+    </li>
+    <li>
+      changes <code>lastName</code> after 2 seconds to "{{ newLastName }}"
+    </li>
+    <li>changes <code>age</code> every second to "{{ newAge }}"</li>
+  </ul>
+</div>
+
+<div style="background-color: rgba(0, 0, 0, 0.1); padding: 10px">
+  <p>lastName without observable: {{ service.lastName }}</p>
+  <p>lastName with observable: {{ service.lastName$ | async }}</p>
+  <p>age without observable: {{ service.age }}</p>
+  <p>age with observable: {{ service.age$ | async }}</p>
+</div>
